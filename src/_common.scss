@@ -1,0 +1,46 @@
+@import './variables';
+
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/OpenSansRegular.woff2') format('woff2'),
+    url('./assets/fonts/OpenSansRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/OpenSansSeniBold.woff2') format('woff2'),
+    url('./assets/fonts/OpenSansSeniBold.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'OpenSans', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: $body-color;
+}
+
+h1,h2, h3, h4, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+}

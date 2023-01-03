@@ -1,0 +1,25 @@
+@import '../../common';
+@import '../../variables';
+
+.ticket-list {
+  max-height: 1020px;
+
+  &__btn {
+    width: 100%;
+    max-height: 50px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $white-color;
+    background-color: #2196F3;
+    transition: background-color .2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #2181F3;
+    }
+  }
+}
