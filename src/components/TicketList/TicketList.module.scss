@@ -1,5 +1,5 @@
-@import '../../common';
-@import '../../variables';
+@import '../../style/common';
+@import '../../style/variables';
 
 .ticket-list {
   max-height: 1020px;
@@ -22,4 +22,13 @@
       background-color: #2181F3;
     }
   }
+}
+
+.tickets-item {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+  background-color: $white-color;
 }

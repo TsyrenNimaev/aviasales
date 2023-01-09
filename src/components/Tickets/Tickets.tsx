@@ -6,9 +6,9 @@ import classes from './Tickets.module.scss';
 
 const Tickets = () => {
   return (
-    <li className={classes['tickets-item']}>
+    <React.Fragment>
       <div className={classes['tickets-item__price']}>
-        <span>13 400 p</span>
+        <span>13 400 р</span>
         <span>
           <img src={logo} alt="avialogo" />
         </span>
@@ -43,7 +43,7 @@ const Tickets = () => {
           </li>
         </ul>
       </div>
-    </li>
+    </React.Fragment>
   );
 };
 

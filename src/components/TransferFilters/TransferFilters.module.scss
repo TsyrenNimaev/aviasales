@@ -1,7 +1,7 @@
-@import '../../variables';
-@import '../../common';
+@import '../../style/common';
+@import '../../style/variables';
 
-.transfer-filters-form {
+.transfer-filter-form {
   display: flex;
   flex-direction: column;
   min-width: 232px;

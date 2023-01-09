@@ -4,16 +4,16 @@
   font-family: 'OpenSans';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/OpenSansRegular.woff2') format('woff2'),
-    url('./assets/fonts/OpenSansRegular.woff') format('woff');
+  src: url('../assets/fonts/OpenSansRegular.woff2') format('woff2'),
+    url('../assets/fonts/OpenSansRegular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'OpenSans';
   font-style: normal;
   font-weight: 600;
-  src: url('./assets/fonts/OpenSansSeniBold.woff2') format('woff2'),
-    url('./assets/fonts/OpenSansSeniBold.woff') format('woff');
+  src: url('../assets/fonts/OpenSansSeniBold.woff2') format('woff2'),
+    url('../assets/fonts/OpenSansSeniBold.woff') format('woff');
 }
 
 * {
