@@ -5,7 +5,7 @@
   margin: 0 auto;
   background-color: $section-color;
 
-  .logo-img {
+  .logo__img {
     display: block;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -16,6 +16,19 @@
     justify-content: space-between;
     max-width: 754px;
     margin: 0 auto;
+  }
+}
+
+.active {
+  animation: rotateAnimation 1.5s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

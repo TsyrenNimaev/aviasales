@@ -7,7 +7,9 @@
   min-width: 232px;
   max-height: 252px;
   margin-right: 20px;
+  margin-bottom: 20px;
   padding-top: 20px;
+  padding-bottom: 10px;
   border-radius: 5px;
   background-color: $white-color;
   color: $text-colot;
@@ -82,6 +84,6 @@
 
   &:checked::before,
   &:checked::after {
-    border-color: #2196F3;
+    border-color: $blue-color;
   }
 }

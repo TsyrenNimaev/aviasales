@@ -1,8 +1,7 @@
 import React, { FC, ChangeEventHandler } from 'react';
 import { connect } from 'react-redux';
-// import uniqid from 'uniqid';
 
-import { Checkbox } from '../../redux/transfer-reducer';
+import { Checkbox } from '../../redux/reducers/transfer-reducer';
 import { State } from '../../redux/types';
 import * as actions from '../../redux/actions';
 

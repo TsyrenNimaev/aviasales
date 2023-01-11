@@ -1,24 +1,44 @@
-import React from 'react';
+import React, { FC, ChangeEventHandler } from 'react';
+import { connect } from 'react-redux';
+
+import { State } from '../../redux/types';
+import { cheapestTicket as cheapest } from '../../redux/actions';
 
 import classes from './Tabs.module.scss';
 
-const Tabs = () => {
-  return (
-    <form className={classes['tabs-form']}>
-      <label htmlFor="cheap" className={classes['tabs-label']}>
-        <span className={classes.active}>самый дешевый</span>
-        <input id="cheap" className={classes['tabs-input']} name="radio" type="radio" />
-      </label>
-      <label htmlFor="fast" className={classes['tabs-label']}>
-        <span>самый быстрый</span>
-        <input id="fast" className={classes['tabs-input']} name="radio" type="radio" />
-      </label>
-      <label className={classes['tabs-label']}>
-        <span>оптимальный</span>
-        <input className={classes['tabs-input']} name="radio" type="radio" />
-      </label>
-    </form>
-  );
+type Properties = {
+  state: State,
+  cheapestTicket: ChangeEventHandler<HTMLElement>,
 };
 
-export default Tabs;
+const Tabs: FC<Properties> = ({ state, cheapestTicket }) => {
+  const { tabs } = state.tabsReducer;
+  const tab = tabs.map((filter) => {
+    const labelClasses = [classes.tabs__label];
+    if (filter.checked) labelClasses.push(classes.active);
+
+    return (
+      <label className={labelClasses.join(' ')} key={Math.random()}>
+        {filter.name}
+        <input
+          type="radio"
+          value={filter.name}
+          className={classes['tabs-input']}
+          checked={filter.checked}
+          onChange={cheapestTicket}
+        />
+      </label>
+    );
+  });
+  return <form className={classes['tabs-form']}>{tab}</form>;
+};
+
+const mapStateToProps = (state: State) => {
+  return { state };
+};
+
+const mapDispatchToProperties = {
+  cheapestTicket: cheapest,
+};
+
+export default connect(mapStateToProps, mapDispatchToProperties)(Tabs);

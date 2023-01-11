@@ -11,7 +11,7 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 1;
-    color: #2196F3;
+    color: $blue-color;
   }
 }
 
@@ -27,6 +27,7 @@
     li {
       display: flex;
       flex-direction: column;
+      width: 25%;
 
       span:first-child {
         font-size: 12px;

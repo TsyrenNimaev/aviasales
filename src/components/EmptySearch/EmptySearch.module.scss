@@ -1,0 +1,79 @@
+@import '../../style/common';
+@import '../../style/variables';
+
+.empty-contaoner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  border: 1px solid $blue-color;
+  border-radius: 5px;
+  background-color: rgba(33, 150, 243, .1);
+
+  div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $blue-color;
+    width: 70px;
+    height: 70px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+    overflow: hidden;
+
+    .eyes {
+      margin-bottom: 23px;
+      width: 100%;
+      height: 50%;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $white-color;
+      }
+
+      &::before {
+        left: 7px;
+      }
+
+      &::after {
+        right: 7px;
+      }
+    }
+
+    .mouth {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin: auto;
+      border-radius: 20px;
+      background-color: $white-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: -30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        background-color: $blue-color;
+      }
+    }
+  }
+
+  .empty-description {
+    color: $text-colot
+  }
+}

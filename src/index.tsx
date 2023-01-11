@@ -1,22 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { legacy_createStore as createStore, applyMiddleware, combineReducers } from 'redux';
+import { legacy_createStore as createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-import transferReducer from './redux/transfer-reducer';
-import App from './components/App/App';
+import App from './components/App';
+import { rootReducer } from './redux/reducers/root-reducer';
 
-import './index.scss';
-
-const rootReducer = combineReducers({ transferReducer })
+import './style/index.scss';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
-const root = ReactDOM.createRoot(
-  // eslint-disable-next-line prettier/prettier
-  document.getElementById('root') as HTMLElement
-);
+// eslint-disable-next-line prettier/prettier
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <Provider store={store}>

@@ -1,4 +1,4 @@
-import { GetInfoActionTypes } from './actions';
+import { GetInfoActionTypes } from '../actions';
 
 interface Action {
   type: string;
@@ -56,10 +56,10 @@ const transferReducer = (state = initialState, action: Action) => {
       return { ...state, checkbox: toggleAdd(newCheckbox) };
     }
     case GetInfoActionTypes.ALL: {
-      const newBox = state.checkbox.map((el) => {
+      const newCheckbox = state.checkbox.map((el) => {
         return { ...el, checked: !state.checkbox[0].checked };
       });
-      return { ...state, checkbox: newBox };
+      return { ...state, checkbox: newCheckbox };
     }
     default:
       return state;
