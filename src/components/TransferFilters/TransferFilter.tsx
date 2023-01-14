@@ -1,9 +1,9 @@
 import React, { FC, ChangeEventHandler } from 'react';
 import { connect } from 'react-redux';
 
-import { Checkbox } from '../../redux/reducers/transfer-reducer';
-import { State } from '../../redux/types';
-import * as actions from '../../redux/actions';
+import { Checkbox } from '../../store/reducers/transfer-reducer';
+import { State } from '../../store/types';
+import * as actions from '../../store/actions';
 
 import classes from './TransferFilters.module.scss';
 

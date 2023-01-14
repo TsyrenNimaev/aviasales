@@ -2,7 +2,7 @@ import React from 'react';
 
 import TransferFilters from '../TransferFilters';
 import OfferContainer from '../OfferContainer';
-import useTypedSelector from '../hooks/useSelector';
+import useTypedSelector from '../../hooks/useSelector';
 import logo from '../../assets/img/Logo.png';
 
 import classes from './App.module.scss';

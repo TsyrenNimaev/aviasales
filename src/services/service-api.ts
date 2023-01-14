@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 import axios from 'axios';
 
-import { GetInfoActionTypes, GetCombinateTypes } from '../redux/actions';
+import { GetInfoActionTypes, GetCombinateTypes } from '../store/actions';
 
 export const getId = () => {
   return async (dispatch: Dispatch<GetCombinateTypes>) => {

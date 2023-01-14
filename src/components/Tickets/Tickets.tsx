@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { add, format, minutesToHours } from 'date-fns';
 
-import { TicketTypes } from '../../redux/types';
+import { TicketTypes } from '../../store/types';
 
 import classes from './Tickets.module.scss';
 

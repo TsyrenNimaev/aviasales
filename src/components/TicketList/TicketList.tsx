@@ -2,11 +2,11 @@ import React, { FC, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import Tickets from '../Tickets';
-import { RootState } from '../../redux/reducers/root-reducer';
-import { TicketTypes } from '../../redux/types';
-import { Checkbox } from '../../redux/reducers/transfer-reducer';
+import { RootState } from '../../store/reducers/root-reducer';
+import { TicketTypes } from '../../store/types';
+import { Checkbox } from '../../store/reducers/transfer-reducer';
 import { getId as getID, getAviaInfo as getAvia } from '../../services/service-api';
-import { showMoreTickets as moreTickets } from '../../redux/actions';
+import { showMoreTickets as moreTickets } from '../../store/actions';
 import EmptySearch from '../EmptySearch';
 
 import classes from './TicketList.module.scss';

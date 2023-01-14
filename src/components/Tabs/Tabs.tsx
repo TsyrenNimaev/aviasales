@@ -1,8 +1,8 @@
 import React, { FC, ChangeEventHandler } from 'react';
 import { connect } from 'react-redux';
 
-import { State } from '../../redux/types';
-import { cheapestTicket as cheapest } from '../../redux/actions';
+import { State } from '../../store/types';
+import { cheapestTicket as cheapest } from '../../store/actions';
 
 import classes from './Tabs.module.scss';
 
